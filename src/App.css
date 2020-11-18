@@ -1,0 +1,20 @@
+
+.image{
+  width: 20%;
+}
+.Profil{
+  border: 2px solid black;
+  padding: 70px;
+ background-color: cornflowerblue;
+
+  background-size: 10px;
+}
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: gray;
+  font-size: 16px;
+  
+}
