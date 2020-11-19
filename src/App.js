@@ -7,21 +7,29 @@ import Timer from "./Timer"
   class App extends React.Component {
 
     state = {
+      isShow: false,
       fullName : 'Mark zukerburg' ,
       bio : 'Hello from USA' ,
       imgSrc : <img className='image' src={Mrk}  alt='Mrk' /> ,    
-      profession : 'Busnessman' , }
-    
+      profession : 'Busnessman' , };
+    toggleIsShow = () =>{
+      this.setState({isShow: !this.state.isShow
+      });
+    };
 
       render() {
             return(
-            <div className='Profil'>
+            <div className='Profile'>
+          <button onClick={()=> this.toggleIsShow()}>Show/Hide Profile</button>
+          {this.state.isShow &&(
+            <React.Fragment>
             <h1 >  FullName : {this.state.fullName}        </h1>
             <h1>  Bio :   {this.state.bio }               </h1> 
             <h1>            {this.state.imgSrc}            </h1>
             <h1>  Profession :  {this.state.profession}      </h1> 
             <Timer/>  
-            <button>Show/Hide</button>
+            </React.Fragment>
+            )}
             </div>
             
               )  
